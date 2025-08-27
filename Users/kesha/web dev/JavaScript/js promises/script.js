@@ -1,7 +1,6 @@
 console.log("start")
-setTimeout(() => {
-    console.log("this thing is see after 5 second of execution of this program")
-}, 5000);
+console.log("line 1")
+console.log("line 2")
+console.log("line 3")
+console.log("line 4")
 console.log("end")
-
-// asychronous behaiviour of js
