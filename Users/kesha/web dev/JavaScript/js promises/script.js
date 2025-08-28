@@ -1,21 +1,20 @@
-console.log("=== Program start ===");
+// now we implement the promises
 
-// syncronous function
-function greet(name) {
-  console.log("hello " + name);
+let promiseExample = new Promise((resolve,reject)=>{
+  let success = false;
+  if(success)
+    resolve("work successfully done")
+  else
+    reject("work failed")
 }
 
-// asyncronous function
-function delayedGreet(name, delay) {
-  setTimeout(() => {
-    console.log("hello " + name + " after " + delay / 1000 + " second");
-  }, delay);
+)
+
+promiseExample.then((message)=>{
+  console.log("success: "+message)
+})
+
+.catch((error)=>{
+  console.log("error: "+error)
 }
-
-//execution
-greet("keshav"); //syncronous
-delayedGreet("keshav", 4000); // asyncronous
-greet("ajay"); // syncronous
-delayedGreet("ajay", 2000); // asyncronous
-
-console.log("=== program end ===");
+)
