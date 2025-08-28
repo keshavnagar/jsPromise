@@ -1,8 +1,7 @@
-function getData(dataId){//suppose it recieve the data after 2s, than we use setTimeOut
+function getData(dataId){
   setTimeout(() => {
      console.log("data: "+dataId)
   }, 2000);
- 
 }
 
 getData(789432)
