@@ -1,6 +1,8 @@
 let p1 = new Promise((resolve, reject) => {
   let x = 90;
+  if(x==1)
  resolve(x); // calling by .then and x assign to .then()'s argument
+else
 reject(x);
 });
 
