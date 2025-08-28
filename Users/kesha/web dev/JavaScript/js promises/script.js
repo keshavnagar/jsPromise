@@ -1,20 +1,25 @@
-// now we implement the promises
-
-let promiseExample = new Promise((resolve,reject)=>{
-  let success = false;
-  if(success)
-    resolve("work successfully done")
+console.log("==== Programm start====");
+let asyncTask = new Promise((resolve, reject) => {
+  let success = true;
+  if (success)
+    resolve(
+      setTimeout(() => {
+        console.log("successufull " + "after " + 4 + " seconds");
+      }, 4000)
+    );
   else
-    reject("work failed")
-}
+    reject(
+      setTimeout(() => {
+        console.log("unsuccessful " + "after " + 6 + " second");
+      }, 6000)
+    );
+});
 
-)
-
-promiseExample.then((message)=>{
-  console.log("success: "+message)
-})
-
-.catch((error)=>{
-  console.log("error: "+error)
-}
-)
+asyncTask
+  .then((message) => {
+    console.log( message);
+  })
+  .catch((message) => {
+    console.log( message);
+  });
+console.log("==== Programm end====");
