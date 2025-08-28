@@ -1,10 +1,5 @@
-// now we understood the call back function
-
-function callBackFun(sum) {
-  return sum(1, 2);
+function getData(dataId){
+  console.log("data: "+dataId)
 }
 
-let result = callBackFun((a, b) => {
-  return a + b;
-});
-console.log(result);
+getData(789432)
