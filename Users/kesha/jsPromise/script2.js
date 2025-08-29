@@ -6,6 +6,7 @@ let p1 = new Promise((resolve, reject) => {
 
 let p2 = Promise.resolve(" p2 is resolved");
 let p3 = () => Promise.resolve(null);
+let p4 = () => Promise.reject(`p4 is rejected`)
 
 p1.then((result)=>{
     console.log(`p1 : ${result}`);
@@ -19,3 +20,4 @@ p3().then((result)=>{
     console.log(`p3 : ${result}`);
 })
 
+p4().catch((failed) => console.log(`p4: ${failed}`))
